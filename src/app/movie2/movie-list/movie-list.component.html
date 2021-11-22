@@ -1,0 +1,13 @@
+<p>movie-list works!</p>
+
+<h2 *ngIf="message">{{message}}</h2>
+
+<app-movie-row *ngFor="let m of movieList"
+[movie]="m"
+(click)='clicked(m)'></app-movie-row>
+
+<!--<app-movie-details *ngIf="currentMovie" [movie]="currentMovie">
+
+</app-movie-details>-->
+
+
