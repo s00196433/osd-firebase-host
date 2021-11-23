@@ -1,6 +1,6 @@
 export interface Movie {
     _id : string,
-    title: String,
+    title:  string,
     year: Number,
     runtime:Number,
     tags: string[];

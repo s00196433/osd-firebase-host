@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Movie } from 'src/app/model/movie';
 
 @Component({
   selector: 'app-sample-form',
@@ -8,9 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class SampleFormComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+ngOnInit(): void {
   }
 
   onSubmit(){
@@ -27,6 +26,7 @@ export class SampleFormComponent implements OnInit {
   }
   get year() {
     return this.movieForm.get('year');
-  }
+  } 
+
 
 }

@@ -1,13 +1,57 @@
-<p>movie-list works!</p>
 
+<div>Movie-list works!</div>
+
+  
 <h2 *ngIf="message">{{message}}</h2>
 
-<app-movie-row *ngFor="let m of movieList"
-[movie]="m"
-(click)='clicked(m)'></app-movie-row>
 
-<!--<app-movie-details *ngIf="currentMovie" [movie]="currentMovie">
+  <app-movie-row *ngFor="let m of movieList"
+  [movie]="m"
+  (click)='clicked(m)'></app-movie-row>
 
-</app-movie-details>-->
+  <app-movie-details *ngIf="currentMovie" [movie]="currentMovie">
+
+  </app-movie-details>
+
+
+<!--<div class="container-fluid">
+
+    <div *ngIf="message" class="alert alert-warning alert-dismissible show" role="alert">
+      <strong>Opps</strong> {{message}}
+      <button type="button" class="btn-close" (click)="dismissAlert()" aria-label="Close"></button>
+    </div>
+  
+
+    <button (click)="openAddMovie()" *ngIf="!showMovieForm" 
+    class="btn btn-lg btn-outline-primary">Add Movie</button>
+  
+
+    <button (click)="openEditMovie()" *ngIf="!showMovieForm" [disabled]="!currentMovie"
+      class="btn btn-lg btn-outline-primary">Edit Movie</button>
+  
+
+    <button (click)="deleteMovie()" *ngIf="!showMovieForm" [disabled]="!currentMovie"
+      class="btn btn-lg btn-outline-danger">Delete Movie</button>
+  
+
+    <app-movie-form *ngIf="showMovieForm" (newMovieEvent)="addNewMovie($event)" 
+    (movieFormClose)="movieFormClose($event)"
+      [movie]="currentMovie"></app-movie-form>
+  
+
+    <div *ngIf="!showMovieForm">
+      <app-movie-row class="card" *ngFor="let b of movieList" [movie]="b" (click)='clicked(b)'
+        [class.bg-info]="isSelected(b)" [class.text-white]="isSelected(b)">
+      </app-movie-row>
+    </div>
+  
+
+    <app-movie-details *ngIf="currentMovie!" [movie]="currentMovie">
+  
+
+    </app-movie-details>
+</div> -->
+
+
 
 
