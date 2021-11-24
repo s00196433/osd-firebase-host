@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Movie } from 'src/app/model/movie';
 
+
 @Component({
   selector: 'app-movie-form',
   templateUrl: './movie-form.component.html',
@@ -9,17 +10,17 @@ import { Movie } from 'src/app/model/movie';
 })
 export class MovieFormComponent implements OnInit {
 
-
+  
   @Input() movie?: Movie;
   @Output() movieFormClose = new EventEmitter<Movie>();
   message: string = "";
-  movieForm? : FormGroup  ;
-
+  //movieForm? : FormGroup  ;
+   movieForm : FormGroup= new FormGroup({});
+  
 
   constructor() { }
 
   ngOnInit(): void {
-	
 
     this.movieForm = new FormGroup({
       title: new FormControl(this.movie?.title, [Validators.required, Validators.minLength(3)]),
@@ -27,18 +28,16 @@ export class MovieFormComponent implements OnInit {
     })
   }
 
-
   onSubmit() {
     console.log('forms submitted with ');
     console.table(this.movieForm?.value);
     this.movieFormClose.emit(this.movieForm?.value)
   }
 
-
   get title() {
     return this.movieForm?.get('title');
   }
-  get year () {
+  get year() {
     return this.movieForm?.get('year');
   }
 
@@ -46,5 +45,8 @@ export class MovieFormComponent implements OnInit {
   closeForm() {
     this.movieFormClose.emit(undefined)
 
-}
+  }
+
+
+
 }

@@ -12,8 +12,15 @@ export class SampleFormComponent implements OnInit {
 ngOnInit(): void {
   }
 
+  /* trying to get CRUD to work */
+  @Output() newMovieEvent = new EventEmitter<Movie>();
+  message: string = "";
+/*--------------new -------------------*/
+
   onSubmit(){
     console.log('forms submitted with ' + this.movieForm.value)
+   /*new*/
+    this.newMovieEvent.emit(this.movieForm.value)
   } 
 
   movieForm : FormGroup = new FormGroup({
