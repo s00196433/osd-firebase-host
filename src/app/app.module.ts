@@ -5,12 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 
-import { MovieRowComponent } from './movie2/movie-row/movie-row.component';
+import { MovieRowComponent } from './movie/movie-row/movie-row.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MovieDetailsComponent } from './movie2/movie-details/movie-details.component';
-import { MovieListComponent } from './movie2/movie-list/movie-list.component';
-import { MovieFormComponent } from './movie2/movie-form/movie-form.component';
+import { MovieDetailsComponent } from './movie/movie-details/movie-details.component';
+import { MovieListComponent } from './movie/movie-list/movie-list.component';
+import { MovieFormComponent } from './movie/movie-form/movie-form.component';
 
 
 
