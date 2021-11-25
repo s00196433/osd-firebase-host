@@ -23,7 +23,7 @@ export class MovieFormComponent implements OnInit {
   ngOnInit(): void {
 
     this.movieForm = new FormGroup({
-      title: new FormControl(this.movie?.title, [Validators.required, Validators.minLength(3)]),
+      title: new FormControl(this.movie?.title, [Validators.required, Validators.minLength(1)]),
       year: new FormControl(this.movie?.year, [Validators.required, Validators.max(2024)]),
       runtime: new FormControl(this.movie?.runtime, [Validators.required, Validators.min(1)])
     })
