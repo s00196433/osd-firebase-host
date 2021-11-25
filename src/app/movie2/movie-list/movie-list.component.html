@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
   <div *ngIf="message" class="alert alert-warning alert-dismissible show" role="alert">
-    <strong>Opps</strong> {{message}}
+    {{message}}
     <button type="button" class="btn-close" (click)="dismissAlert()" aria-label="Close"></button>
   </div>
 
@@ -13,10 +13,6 @@
 
   <button (click)="deleteMovie()" *ngIf="!showMovieForm" [disabled]="!currentMovie"
     class="btn btn-lg btn-outline-danger">Delete Movie</button>
-
-  <!--<app-movie-form *ngIf="showMovieForm" (newMovieEvent)="addNewMovie($event)" 
-  (movieFormClose)="movieFormClose($event)"
-    [movie]="currentMovie"></app-movie-form> -->
 
     <app-movie-form *ngIf="showMovieForm"
     (movieFormClose)="movieFormClose($event)"

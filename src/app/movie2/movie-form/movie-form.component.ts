@@ -24,7 +24,8 @@ export class MovieFormComponent implements OnInit {
 
     this.movieForm = new FormGroup({
       title: new FormControl(this.movie?.title, [Validators.required, Validators.minLength(3)]),
-      year: new FormControl(this.movie?.year, [Validators.required, Validators.max(2024)])
+      year: new FormControl(this.movie?.year, [Validators.required, Validators.max(2024)]),
+      runtime: new FormControl(this.movie?.runtime, [Validators.required, Validators.min(1)])
     })
   }
 
@@ -39,6 +40,10 @@ export class MovieFormComponent implements OnInit {
   }
   get year() {
     return this.movieForm?.get('year');
+  }
+
+  get runtime() {
+    return this.movieForm?.get('runtime');
   }
 
 

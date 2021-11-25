@@ -9,11 +9,7 @@ import {Movie} from '../../model/movie';
 })
 export class MovieListComponent implements OnInit {
 
-  /*movieList: Movie[] = [];
-  message: string = "";
-  showMovieForm: boolean = false;
 
-  currentMovie?: Movie = undefined;*/
 
   movieList: Movie[] = [];
   message: string = "";
