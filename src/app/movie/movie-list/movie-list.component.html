@@ -37,3 +37,43 @@
 
 </div>
 
+
+<!--<p>movie-list works!</p>
+
+<div class="container-fluid">
+
+  <div *ngIf="message" class="alert alert-warning alert-dismissible show" role="alert">
+    {{message}}
+    <button type="button" class="btn-close" (click)="dismissAlert()" aria-label="Close"></button>
+  </div>
+
+  <button (click)="openAddMovie()" *ngIf="!showMovieForm" 
+  class="btn btn-lg btn-outline-primary">Add Movie</button>
+
+  <button (click)="openEditMovie()" *ngIf="!showMovieForm" [disabled]="!currentMovie"
+    class="btn btn-lg btn-outline-primary">Edit Movie</button>
+
+  <button (click)="deleteMovie()" *ngIf="!showMovieForm" [disabled]="!currentMovie"
+    class="btn btn-lg btn-outline-danger">Delete Movie</button>
+
+    <app-movie-form *ngIf="showMovieForm"
+    (movieFormClose)="movieFormClose($event)"
+      [movie]="currentMovie"></app-movie-form>
+
+
+
+
+  <div *ngIf="!showMovieForm">
+    <app-movie-row class="card" *ngFor="let m of movieList" [movie]="m" (click)='clicked(m)'
+      [class.bg-info]="isSelected(m)" [class.text-white]="isSelected(m)">
+    </app-movie-row>
+  </div>
+
+  <app-movie-details *ngIf="currentMovie!" [movie]="currentMovie">
+
+  </app-movie-details>
+
+
+
+</div> -->
+

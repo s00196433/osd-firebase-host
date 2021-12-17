@@ -115,7 +115,7 @@ export class MovieListComponent implements OnInit {
 // hit the button by mistake
 
   deleteMovie() {
-    console.log('deleting a movie ');
+    console.log('deleting a movie');
     if (this.currentMovie) {
       this.movieService.deleteMovie(this.currentMovie._id)
         .subscribe({
@@ -126,6 +126,8 @@ export class MovieListComponent implements OnInit {
           error: (err) => this.message = err
         });
     }
+
+
 
     // so the updated list appears
 
@@ -147,4 +149,3 @@ export class MovieListComponent implements OnInit {
 
 
   
-

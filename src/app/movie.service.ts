@@ -83,20 +83,20 @@ export class MovieService {
 
 
 /** DELETE: delete the movie from the server */
-/*deleteMovie(id: string): Observable<unknown> {
+deleteMovie(id: string): Observable<unknown> {
   const url = `${this.dataUri}/${id}`; // DELETE 
   return this.http.delete(url)
     .pipe(
       catchError(this.handleError)
     );
-}*/
+}
 
-deleteMovie(id: string){
+/* cat deleteMovie(id: string){
   this.http.delete(this.dataUri +'/'+ id)
   .subscribe(() => {
     console.log('Deleted!');
   });
-}
+} */
 
 
 
