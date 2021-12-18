@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Movie } from '../app/model/movie'
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { Observable, of, throwError } from 'rxjs';
+import { HttpClient, HttpErrorResponse, HttpHeaders  } from '@angular/common/http';
+import { Observable, of, throwError  } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators'
 
 
@@ -11,7 +11,7 @@ import { catchError, map, tap } from 'rxjs/operators'
 export class MovieService {
 
   //private dataUri = 'http://localhost:3000/movies'
-  private dataUri = 'http://localhost:3000/movies'
+  private dataUri = 'https://localhost:8080/movies'
 
   /*constructor(private http: HttpClient) { }
 
@@ -83,21 +83,35 @@ export class MovieService {
 
 
 
+
 /** DELETE: delete the movie from the server */
-deleteMovie(id: string): Observable<unknown> {
+/*deleteMovie(id: string): Observable<unknown> {
   const url = `${this.dataUri}/${id}`; // DELETE 
   return this.http.delete(url)
     .pipe(
       catchError(this.handleError)
     );
+}*/
+
+/*deleteMovie(id: string): Observable<unknown> {
+  const url = `${this.dataUri}/${id}`; // DELETE 
+  return this.http.delete(url)
+    .pipe(
+      catchError(this.handleError)
+    );
+}*/
+
+/** DELETE: delete the book from the server */
+deleteMovie(id: string): Observable<unknown> {
+  console.log("id:", id);
+  const url = `${this.dataUri}/${id}`; // DELETE 
+   return this.http.delete(url)
+    .pipe(
+    catchError(this.handleError)
+    ); 
 }
 
-/* cat deleteMovie(id: string){
-  this.http.delete(this.dataUri +'/'+ id)
-  .subscribe(() => {
-    console.log('Deleted!');
-  });
-} */
+
 
 
 

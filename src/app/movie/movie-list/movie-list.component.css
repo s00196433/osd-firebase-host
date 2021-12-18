@@ -1,0 +1,25 @@
+#addButton
+{
+    background-color: green;
+    color:white;
+    border: green;
+    margin:2%;
+   
+    
+}
+
+#editButton
+{
+    background-color: blue;
+    color:white;
+    border: blue;
+    margin: 2%;
+}
+
+#deleteButton
+{
+    background-color: red;
+    color:white;
+    border: red;
+    margin: 2%;
+}

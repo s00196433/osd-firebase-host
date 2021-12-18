@@ -7,7 +7,7 @@
     
 
     <div class="card">
-        <h4 class="card-header">Login Form</h4>
+        <h4 class="card-header" id="loginHStyle">Login Form</h4>
         <div class="card-body">
             <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
                 <div class="form-group">
@@ -19,7 +19,7 @@
                     <label for="password">Password</label>
                     <input id="password" type="password" formControlName="password" class="form-control"/>
                 </div>
-                <button class="btn btn-danger">
+                <button class="btn btn-danger" id="signInButton">
                    Sign In
                 </button>
             </form>

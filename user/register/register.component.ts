@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-
 import { FormControl, FormGroup } from '@angular/forms';
-import { UserService } from 'src/app/user.service';
+import { UserService } from 'src/user.service';
 
 
 import { HttpClient, HttpErrorResponse } from '@angular/common/http'
 import { BehaviorSubject, Observable, ReplaySubject, throwError } from 'rxjs';
-import { User } from '../../src/app/model/user';
+import { User } from 'src/app/model/user';
 import { catchError, map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-register',
@@ -16,6 +16,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+
 
   userForm : FormGroup= new FormGroup({});
   //userForm?: FormGroup;
@@ -49,4 +50,8 @@ export class RegisterComponent implements OnInit {
     this.message = "";
   }
 
+
+
 }
+
+

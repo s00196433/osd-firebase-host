@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { User } from './model/user';
-import { UserService } from './user.service';
+import { UserService } from 'src/user.service';
 
 @Component({
   selector: 'app-root',

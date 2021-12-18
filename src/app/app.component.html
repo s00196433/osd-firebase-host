@@ -1,6 +1,27 @@
 
 <!-- nav -->
-<nav class="navbar navbar-expand navbar-dark bg-dark" >
+<nav class="navbar navbar-expand navbar-dark " id="navRouteStyle" >
+    <div class="navbar-nav" style="margin: 0 auto; width: 656px;text-align:center; padding-left: 17%;" >
+        <a class="nav-item nav-link" routerLink="/" routerLinkActive="active">Home</a>
+        <a class="nav-item nav-link" routerLink="/movies" routerLinkActive="active">Movies</a>
+        <a *ngIf="user" class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
+        <a *ngIf="!user" class="nav-item nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+        <a *ngIf="!user" class="nav-item nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+        <a  *ngIf="user" class="nav-item nav-link" (click)="logout()">Logout</a>
+        </div>
+</nav>
+
+<div id="userStyle" *ngIf="user">Current User: {{user.firstName}}</div>
+
+<!-- main app container -->
+<div class="container pt-4">
+    <router-outlet></router-outlet>
+</div>
+
+
+
+<router-outlet></router-outlet>
+<!--<nav class="navbar navbar-expand navbar-dark bg-dark" >
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/" routerLinkActive="active">Home</a>
         <a class="nav-item nav-link" routerLink="/movies" routerLinkActive="active">Movies</a>
@@ -16,6 +37,6 @@
 
 <h1>2021 Client Application for worksheets
 </h1>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
 
 
