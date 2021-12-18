@@ -3,9 +3,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UserService } from 'src/app/user.service';
 
 
-
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,7 +10,7 @@ import { UserService } from 'src/app/user.service';
 })
 export class LoginComponent implements OnInit {
 
-    signinForm: FormGroup = new FormGroup({});
+  signinForm: FormGroup = new FormGroup({});
     message: String = "";
     
     constructor(
@@ -48,4 +45,5 @@ export class LoginComponent implements OnInit {
     dismissAlert() {
         this.message = "";
     }
+
 }

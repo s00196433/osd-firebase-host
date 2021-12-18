@@ -10,6 +10,7 @@ import { catchError, map, tap } from 'rxjs/operators'
 })
 export class MovieService {
 
+  //private dataUri = 'http://localhost:3000/movies'
   private dataUri = 'http://localhost:3000/movies'
 
   /*constructor(private http: HttpClient) { }
