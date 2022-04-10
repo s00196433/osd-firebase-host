@@ -12,10 +12,11 @@ app.get('/products/:id', function (req, res, next) {
   console.log('CORS-enabled web server listening on port 80')
 })*/
 
-/*app.listen(process.env.PORT || 8080, function(){
+
+/*app.listen(process.env.PORT || 4200, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-}); */
+});*/
 
 app.listen(process.env.PORT || 80, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
+}); 
