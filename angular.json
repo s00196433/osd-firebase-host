@@ -32,7 +32,6 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
-
             ],
             "scripts": [
               "./node_modules/@popperjs/core/dist/umd/popper.min.js",
@@ -104,12 +103,21 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
-
             ],
             "scripts": [
               "./node_modules/@popperjs/core/dist/umd/popper.min.js",
               "./node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "ProjectAngular:build:production",
+            "firebaseProject": "my-osd-project",
+            "firebaseHostingSite": "my-osd-project"
           }
         }
       }

@@ -19,7 +19,9 @@ import { UsersComponent } from '../../user/users/users.component';
 //---------------------------------------------------------------------------
 
 
-
+import { AngularFireModule } from "@angular/fire/compat";
+import { environment } from 'src/environments/environment';
+import { AngularFireDatabaseModule,AngularFireDatabase } from '@angular/fire/compat/database';
 
 
 //----------------------------------------------------------------------
@@ -51,6 +53,8 @@ import { JwtinterceptorService } from './helper/jwtinterceptor.service';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     ReactiveFormsModule
   ],
   providers: [

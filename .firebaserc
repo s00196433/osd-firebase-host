@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "my-osd-project"
+  },
+  "targets": {
+    "my-osd-project": {
+      "hosting": {
+        "ProjectAngular": [
+          "my-osd-project"
+        ]
+      }
+    }
   }
 }
